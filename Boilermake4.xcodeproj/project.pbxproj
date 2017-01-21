@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46650CC91E332C5C00E75B09 /* History.storyboard */; };
+		5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601831E332AE700F532E4 /* CognitiveServices.swift */; };
+		5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601851E332AE700F532E4 /* AnalyzeImage.swift */; };
+		541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601861E332AE700F532E4 /* GetThumbnail.swift */; };
+		541601911E332AE700F532E4 /* ListDomainSpecificModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601871E332AE700F532E4 /* ListDomainSpecificModels.swift */; };
+		541601921E332AE700F532E4 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601881E332AE700F532E4 /* OCR.swift */; };
+		541601931E332AE700F532E4 /* RecognizeDomainSpecificContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601891E332AE700F532E4 /* RecognizeDomainSpecificContent.swift */; };
+		541601941E332AE700F532E4 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5416018A1E332AE700F532E4 /* TagImage.swift */; };
+		541601951E332AE700F532E4 /* JSONNSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5416018B1E332AE700F532E4 /* JSONNSDataExtension.swift */; };
+		541601961E332AE700F532E4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5416018D1E332AE700F532E4 /* StringExtension.swift */; };
 		AE2CB5111E330C1200F4071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5101E330C1200F4071D /* AppDelegate.swift */; };
-		AE2CB5131E330C1200F4071D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5121E330C1200F4071D /* ViewController.swift */; };
+		AE2CB5131E330C1200F4071D /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5121E330C1200F4071D /* OCRViewController.swift */; };
 		AE2CB5161E330C1200F4071D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2CB5141E330C1200F4071D /* Main.storyboard */; };
 		AE2CB5191E330C1200F4071D /* Boilermake4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5171E330C1200F4071D /* Boilermake4.xcdatamodeld */; };
 		AE2CB51B1E330C1200F4071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2CB51A1E330C1200F4071D /* Assets.xcassets */; };
@@ -18,9 +27,18 @@
 
 /* Begin PBXFileReference section */
 		46650CC91E332C5C00E75B09 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		541601831E332AE700F532E4 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
+		541601851E332AE700F532E4 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
+		541601861E332AE700F532E4 /* GetThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
+		541601871E332AE700F532E4 /* ListDomainSpecificModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDomainSpecificModels.swift; sourceTree = "<group>"; };
+		541601881E332AE700F532E4 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
+		541601891E332AE700F532E4 /* RecognizeDomainSpecificContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeDomainSpecificContent.swift; sourceTree = "<group>"; };
+		5416018A1E332AE700F532E4 /* TagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagImage.swift; sourceTree = "<group>"; };
+		5416018B1E332AE700F532E4 /* JSONNSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNSDataExtension.swift; sourceTree = "<group>"; };
+		5416018D1E332AE700F532E4 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AE2CB50D1E330C1200F4071D /* Boilermake4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boilermake4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2CB5101E330C1200F4071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE2CB5121E330C1200F4071D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE2CB5121E330C1200F4071D /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 		AE2CB5151E330C1200F4071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE2CB5181E330C1200F4071D /* Boilermake4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Boilermake4.xcdatamodel; sourceTree = "<group>"; };
 		AE2CB51A1E330C1200F4071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +57,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541601811E332AE700F532E4 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				541601821E332AE700F532E4 /* CognitiveServices */,
+				5416018C1E332AE700F532E4 /* Swift Extensions */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		541601821E332AE700F532E4 /* CognitiveServices */ = {
+			isa = PBXGroup;
+			children = (
+				541601831E332AE700F532E4 /* CognitiveServices.swift */,
+				541601841E332AE700F532E4 /* ComputerVision */,
+				5416018B1E332AE700F532E4 /* JSONNSDataExtension.swift */,
+			);
+			path = CognitiveServices;
+			sourceTree = "<group>";
+		};
+		541601841E332AE700F532E4 /* ComputerVision */ = {
+			isa = PBXGroup;
+			children = (
+				541601851E332AE700F532E4 /* AnalyzeImage.swift */,
+				541601861E332AE700F532E4 /* GetThumbnail.swift */,
+				541601871E332AE700F532E4 /* ListDomainSpecificModels.swift */,
+				541601881E332AE700F532E4 /* OCR.swift */,
+				541601891E332AE700F532E4 /* RecognizeDomainSpecificContent.swift */,
+				5416018A1E332AE700F532E4 /* TagImage.swift */,
+			);
+			path = ComputerVision;
+			sourceTree = "<group>";
+		};
+		5416018C1E332AE700F532E4 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5416018D1E332AE700F532E4 /* StringExtension.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
 		AE2CB5041E330C1200F4071D = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				AE2CB5101E330C1200F4071D /* AppDelegate.swift */,
-				AE2CB5121E330C1200F4071D /* ViewController.swift */,
+				AE2CB5121E330C1200F4071D /* OCRViewController.swift */,
+				541601811E332AE700F532E4 /* SDK */,
 				AE2CB5141E330C1200F4071D /* Main.storyboard */,
 				AE2CB51A1E330C1200F4071D /* Assets.xcassets */,
 				AE2CB51C1E330C1200F4071D /* LaunchScreen.storyboard */,
@@ -103,6 +162,7 @@
 					AE2CB50C1E330C1200F4071D = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8R2RDVLJNC;
+						DevelopmentTeam = 46HMG8GAVG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,9 +204,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2CB5131E330C1200F4071D /* ViewController.swift in Sources */,
+				541601921E332AE700F532E4 /* OCR.swift in Sources */,
+				AE2CB5131E330C1200F4071D /* OCRViewController.swift in Sources */,
+				541601941E332AE700F532E4 /* TagImage.swift in Sources */,
 				AE2CB5111E330C1200F4071D /* AppDelegate.swift in Sources */,
+				541601951E332AE700F532E4 /* JSONNSDataExtension.swift in Sources */,
+				5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */,
+				541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */,
 				AE2CB5191E330C1200F4071D /* Boilermake4.xcdatamodeld in Sources */,
+				541601961E332AE700F532E4 /* StringExtension.swift in Sources */,
+				5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */,
+				541601931E332AE700F532E4 /* RecognizeDomainSpecificContent.swift in Sources */,
+				541601911E332AE700F532E4 /* ListDomainSpecificModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8R2RDVLJNC;
+				DEVELOPMENT_TEAM = 46HMG8GAVG;
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,6 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8R2RDVLJNC;
+				DEVELOPMENT_TEAM = 46HMG8GAVG;
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
