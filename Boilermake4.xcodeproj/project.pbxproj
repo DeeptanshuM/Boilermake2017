@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46650CC91E332C5C00E75B09 /* History.storyboard */; };
 		AE2CB5111E330C1200F4071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5101E330C1200F4071D /* AppDelegate.swift */; };
 		AE2CB5131E330C1200F4071D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5121E330C1200F4071D /* ViewController.swift */; };
 		AE2CB5161E330C1200F4071D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2CB5141E330C1200F4071D /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46650CC91E332C5C00E75B09 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		AE2CB50D1E330C1200F4071D /* Boilermake4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boilermake4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2CB5101E330C1200F4071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE2CB5121E330C1200F4071D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				AE2CB51C1E330C1200F4071D /* LaunchScreen.storyboard */,
 				AE2CB51F1E330C1200F4071D /* Info.plist */,
 				AE2CB5171E330C1200F4071D /* Boilermake4.xcdatamodeld */,
+				46650CC91E332C5C00E75B09 /* History.storyboard */,
 			);
 			path = Boilermake4;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 				AE2CB51E1E330C1200F4071D /* LaunchScreen.storyboard in Resources */,
 				AE2CB51B1E330C1200F4071D /* Assets.xcassets in Resources */,
 				AE2CB5161E330C1200F4071D /* Main.storyboard in Resources */,
+				46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
