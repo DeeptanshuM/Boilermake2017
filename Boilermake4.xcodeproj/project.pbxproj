@@ -161,7 +161,7 @@
 				TargetAttributes = {
 					AE2CB50C1E330C1200F4071D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 46HMG8GAVG;
+						DevelopmentTeam = 8A4H2873BE;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -340,11 +340,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 46HMG8GAVG;
+				DEVELOPMENT_TEAM = 8A4H2873BE;
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaabb";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -355,11 +355,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 46HMG8GAVG;
+				DEVELOPMENT_TEAM = 8A4H2873BE;
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaabb";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

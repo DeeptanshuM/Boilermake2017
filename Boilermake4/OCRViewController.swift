@@ -45,11 +45,21 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     photoImageView.image = selectedImage
     image = selectedImage
     
+    
     // Dismiss the picker.
     dismiss(animated: true, completion: nil)
   }
   
     //MARK: Actions
+    
+    @IBAction func loadImageFromCamera(_ sender: AnyObject) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .camera
+        imagePickerController.delegate = self
+        
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
   
   @IBAction func loadImageFromPhotoLibrary(_ sender: UIButton) {
     
@@ -70,7 +80,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
             let text = self.ocr.extractStringFromDictionary(response!)
             self.textView.text = text
-            print(text)
+            print(response)
             
         })
 

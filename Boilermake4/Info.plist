@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows you to add photos of your receipts using your camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allows you to add photos of your receipts.</string>
 	<key>UILaunchStoryboardName</key>
