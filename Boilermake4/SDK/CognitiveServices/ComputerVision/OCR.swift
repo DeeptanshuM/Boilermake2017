@@ -139,6 +139,7 @@ class OCR: NSObject {
                 for inLine in inLines {
                     extractedText.append(inLine["text"] as! String)
                 }
+                extractedText.append("\n")
             }
         }
         
