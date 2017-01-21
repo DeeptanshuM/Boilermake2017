@@ -76,7 +76,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     
     @IBAction func convertToText(_ sender: Any) {
         
-        let requestObject: OCRRequestObject = (resource: UIImagePNGRepresentation(image!)!, language: .Automatic, detectOrientation: true)
+        let requestObject: OCRRequestObject = (resource: UIImageJPEGRepresentation(image!, 0.8), language: .Automatic, detectOrientation: true)
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
             let text = self.ocr.extractStringFromDictionary(response!)
             
