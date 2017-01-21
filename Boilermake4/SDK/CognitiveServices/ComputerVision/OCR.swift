@@ -129,19 +129,19 @@ class OCR: NSObject {
     func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) -> [String] {
         
         // Get Regions from the dictionary
-        let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
+        let regions = dictionary["regions"] as! NSArray
+        var extractedText: [String] = []
+        for region in regions {
+            let reg = region as? [String:AnyObject]
+            let lines = reg!["lines"] as! NSArray
+            for line in lines {
+                let inLines = (line as? NSDictionary)?["words"] as! [[String:AnyObject]]
+                for inLine in inLines {
+                    extractedText.append(inLine["text"] as! String)
+                }
+            }
+        }
         
-        // Get lines from the regions dictionary
-        let lines = regions!["lines"] as! NSArray
-
-
-        // TODO: Check if this works
-
-        // Get words from lines
-        let inLine = lines.enumerated().map {($0.element as? NSDictionary)?["words"] as! [[String : AnyObject]] }
-        
-        // Get text from words
-        let extractedText = inLine.enumerated().map { $0.element[0]["text"] as! String}
 
         return extractedText
     }

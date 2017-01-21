@@ -8,12 +8,9 @@
 
 import UIKit
 
-class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
   
-    @IBOutlet weak var textView: UITextView!
   @IBOutlet weak var photoImageView: UIImageView!
-    var image: UIImage?
-    let ocr = CognitiveServices.sharedInstance.ocr
 
   
   override func viewDidLoad() {
@@ -43,7 +40,6 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     
     // Set photoImageView to display the selected image.
     photoImageView.image = selectedImage
-    image = selectedImage
     
     // Dismiss the picker.
     dismiss(animated: true, completion: nil)
@@ -56,27 +52,10 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
       let imagePickerController = UIImagePickerController()
       imagePickerController.sourceType = .photoLibrary
       imagePickerController.delegate = self
-    
-    
       
       present(imagePickerController, animated: true, completion: nil)
       
       
     }
-    
-    @IBAction func convertToText(_ sender: Any) {
-        
-        let requestObject: OCRRequestObject = (resource: UIImagePNGRepresentation(image!)!, language: .Automatic, detectOrientation: true)
-        try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
-            let text = self.ocr.extractStringFromDictionary(response!)
-            self.textView.text = text
-            print(text)
-            
-        })
-
-        
-    }
-    
-    
   }
 
