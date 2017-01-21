@@ -1,0 +1,541 @@
+2017-01-21 15:54:32.843656 Boilermake4[437:46293] [Generic] Creating an image format with an unknown type is an error
+FilePath: /var/mobile/Containers/Data/Application/FFBAF958-67F1-4CA6-B4FD-8998CA90D4CD/Documents/Data.txt
+File Text: STARBUCKS store #2478 
+ 342 E, State Street 
+ west Lafayette, IN (765) 746-1674 
+ CHK 706972 
+ 01/21/2017 Il AM 
+ Drawer: I Reg: I 
+ 1795092 
+ Gr Pike Place 
+ Sbux Card 
+ xxxxxxxxxxxx5809 
+ Subtota 
+ Tax 
+ Total 
+ Change Due 
+ Check Closed - 
+ SBUX 
+ Card 
+ 2110 
+ $2.10 
+ $0.15 
+ $2.25 
+ $0 oo 
+ 26,78 
+ 01/21/2017 Il AM 
+ Card x5d09 New Balance: 
+ is registered. 
+ Join our loyalty program 
+ Starbucks Rewards@ 
+ Sign up for promotional emails 
+ Visit Starbucks ecom/rewards 
+ Or download our app 
+ At participating stores 
+ Some restrictions apply 
+
+Optional(["language": en, "textAngle": 0, "regions": <__NSArrayI 0x17446dac0>(
+{
+    boundingBox = "821,474,1376,683";
+    lines =     (
+                {
+            boundingBox = "1066,474,840,83";
+            words =             (
+                                {
+                    boundingBox = "1066,474,358,81";
+                    text = STARBUCKS;
+                },
+                                {
+                    boundingBox = "1470,488,195,69";
+                    text = store;
+                },
+                                {
+                    boundingBox = "1710,481,196,74";
+                    text = "#2478";
+                }
+            );
+        },
+                {
+            boundingBox = "1108,578,755,78";
+            words =             (
+                                {
+                    boundingBox = "1108,578,115,74";
+                    text = 342;
+                },
+                                {
+                    boundingBox = "1273,584,61,71";
+                    text = "E,";
+                },
+                                {
+                    boundingBox = "1391,585,195,71";
+                    text = State;
+                },
+                                {
+                    boundingBox = "1632,581,231,74";
+                    text = Street;
+                }
+            );
+        },
+                {
+            boundingBox = "821,662,1376,102";
+            words =             (
+                                {
+                    boundingBox = "821,664,156,80";
+                    text = west;
+                },
+                                {
+                    boundingBox = "1030,676,385,88";
+                    text = "Lafayette,";
+                },
+                                {
+                    boundingBox = "1475,687,71,68";
+                    text = IN;
+                },
+                                {
+                    boundingBox = "1639,680,181,83";
+                    text = "(765)";
+                },
+                                {
+                    boundingBox = "1872,662,325,85";
+                    text = "746-1674";
+                }
+            );
+        },
+                {
+            boundingBox = "1312,884,396,71";
+            words =             (
+                                {
+                    boundingBox = "1312,885,115,70";
+                    text = CHK;
+                },
+                                {
+                    boundingBox = "1473,884,235,70";
+                    text = 706972;
+                }
+            );
+        },
+                {
+            boundingBox = "1112,978,758,88";
+            words =             (
+                                {
+                    boundingBox = "1112,982,395,84";
+                    text = "01/21/2017";
+                },
+                                {
+                    boundingBox = "1561,984,57,69";
+                    text = Il;
+                },
+                                {
+                    boundingBox = "1795,978,75,73";
+                    text = AM;
+                }
+            );
+        },
+                {
+            boundingBox = "1354,1073,668,84";
+            words =             (
+                                {
+                    boundingBox = "1354,1087,265,69";
+                    text = "Drawer:";
+                },
+                                {
+                    boundingBox = "1681,1083,18,69";
+                    text = I;
+                },
+                                {
+                    boundingBox = "1795,1080,146,77";
+                    text = "Reg:";
+                },
+                                {
+                    boundingBox = "2005,1073,17,70";
+                    text = I;
+                }
+            );
+        },
+                {
+            boundingBox = "957,1081,272,74";
+            words =             (
+                                {
+                    boundingBox = "957,1081,272,74";
+                    text = 1795092;
+                }
+            );
+        }
+    );
+},
+{
+    boundingBox = "722,1283,1027,962";
+    lines =     (
+                {
+            boundingBox = "830,1283,521,77";
+            words =             (
+                                {
+                    boundingBox = "830,1283,76,71";
+                    text = Gr;
+                },
+                                {
+                    boundingBox = "953,1283,158,75";
+                    text = Pike;
+                },
+                                {
+                    boundingBox = "1157,1285,194,75";
+                    text = Place;
+                }
+            );
+        },
+                {
+            boundingBox = "833,1383,360,77";
+            words =             (
+                                {
+                    boundingBox = "833,1383,158,76";
+                    text = Sbux;
+                },
+                                {
+                    boundingBox = "1037,1387,156,73";
+                    text = Card;
+                }
+            );
+        },
+                {
+            boundingBox = "834,1487,638,73";
+            words =             (
+                                {
+                    boundingBox = "834,1487,638,73";
+                    text = xxxxxxxxxxxx5809;
+                }
+            );
+        },
+                {
+            boundingBox = "839,1685,278,73";
+            words =             (
+                                {
+                    boundingBox = "839,1685,278,73";
+                    text = Subtota;
+                }
+            );
+        },
+                {
+            boundingBox = "842,1788,116,69";
+            words =             (
+                                {
+                    boundingBox = "842,1788,116,69";
+                    text = Tax;
+                }
+            );
+        },
+                {
+            boundingBox = "843,1883,188,72";
+            words =             (
+                                {
+                    boundingBox = "843,1883,188,72";
+                    text = Total;
+                }
+            );
+        },
+                {
+            boundingBox = "722,1982,785,78";
+            words =             (
+                                {
+                    boundingBox = "722,1983,472,77";
+                    text = Change;
+                },
+                                {
+                    boundingBox = "1285,1982,222,67";
+                    text = Due;
+                }
+            );
+        },
+                {
+            boundingBox = "1208,2173,541,72";
+            words =             (
+                                {
+                    boundingBox = "1208,2173,189,72";
+                    text = Check;
+                },
+                                {
+                    boundingBox = "1443,2173,230,72";
+                    text = Closed;
+                },
+                                {
+                    boundingBox = "1722,2209,27,9";
+                    text = "-";
+                }
+            );
+        }
+    );
+},
+{
+    boundingBox = "730,2476,157,169";
+    lines =     (
+                {
+            boundingBox = "730,2476,156,71";
+            words =             (
+                                {
+                    boundingBox = "730,2476,156,71";
+                    text = SBUX;
+                }
+            );
+        },
+                {
+            boundingBox = "732,2571,155,74";
+            words =             (
+                                {
+                    boundingBox = "732,2571,155,74";
+                    text = Card;
+                }
+            );
+        }
+    );
+},
+{
+    boundingBox = "1918,1274,398,1271";
+    lines =     (
+                {
+            boundingBox = "1957,1274,158,75";
+            words =             (
+                                {
+                    boundingBox = "1957,1274,158,75";
+                    text = 2110;
+                }
+            );
+        },
+                {
+            boundingBox = "1998,1675,199,79";
+            words =             (
+                                {
+                    boundingBox = "1998,1675,199,79";
+                    text = "$2.10";
+                }
+            );
+        },
+                {
+            boundingBox = "1999,1775,198,78";
+            words =             (
+                                {
+                    boundingBox = "1999,1775,198,78";
+                    text = "$0.15";
+                }
+            );
+        },
+                {
+            boundingBox = "1999,1876,200,77";
+            words =             (
+                                {
+                    boundingBox = "1999,1876,200,77";
+                    text = "$2.25";
+                }
+            );
+        },
+                {
+            boundingBox = "1918,1975,398,77";
+            words =             (
+                                {
+                    boundingBox = "1918,1977,149,75";
+                    text = "$0";
+                },
+                                {
+                    boundingBox = "2163,1975,153,69";
+                    text = oo;
+                }
+            );
+        },
+                {
+            boundingBox = "1922,2475,198,70";
+            words =             (
+                                {
+                    boundingBox = "1922,2475,198,70";
+                    text = "26,78";
+                }
+            );
+        }
+    );
+},
+{
+    boundingBox = "931,2272,1194,1371";
+    lines =     (
+                {
+            boundingBox = "1130,2272,744,81";
+            words =             (
+                                {
+                    boundingBox = "1130,2272,385,81";
+                    text = "01/21/2017";
+                },
+                                {
+                    boundingBox = "1567,2275,57,67";
+                    text = Il;
+                },
+                                {
+                    boundingBox = "1800,2276,74,68";
+                    text = AM;
+                }
+            );
+        },
+                {
+            boundingBox = "931,2468,895,76";
+            words =             (
+                                {
+                    boundingBox = "931,2469,154,75";
+                    text = Card;
+                },
+                                {
+                    boundingBox = "1130,2471,191,71";
+                    text = x5d09;
+                },
+                                {
+                    boundingBox = "1370,2470,108,69";
+                    text = New;
+                },
+                                {
+                    boundingBox = "1523,2468,303,74";
+                    text = "Balance:";
+                }
+            );
+        },
+                {
+            boundingBox = "939,2566,531,85";
+            words =             (
+                                {
+                    boundingBox = "939,2574,67,69";
+                    text = is;
+                },
+                                {
+                    boundingBox = "1058,2566,412,85";
+                    text = "registered.";
+                }
+            );
+        },
+                {
+            boundingBox = "1012,2964,950,84";
+            words =             (
+                                {
+                    boundingBox = "1012,2968,153,71";
+                    text = Join;
+                },
+                                {
+                    boundingBox = "1210,2986,113,53";
+                    text = our;
+                },
+                                {
+                    boundingBox = "1376,2964,265,84";
+                    text = loyalty;
+                },
+                                {
+                    boundingBox = "1688,2984,274,64";
+                    text = program;
+                }
+            );
+        },
+                {
+            boundingBox = "1130,3066,713,73";
+            words =             (
+                                {
+                    boundingBox = "1130,3066,352,73";
+                    text = Starbucks;
+                },
+                                {
+                    boundingBox = "1529,3066,314,72";
+                    text = "Rewards@";
+                }
+            );
+        },
+                {
+            boundingBox = "933,3165,1192,84";
+            words =             (
+                                {
+                    boundingBox = "933,3169,152,79";
+                    text = Sign;
+                },
+                                {
+                    boundingBox = "1131,3186,73,62";
+                    text = up;
+                },
+                                {
+                    boundingBox = "1250,3166,113,74";
+                    text = for;
+                },
+                                {
+                    boundingBox = "1410,3166,424,83";
+                    text = promotional;
+                },
+                                {
+                    boundingBox = "1890,3165,235,75";
+                    text = emails;
+                }
+            );
+        },
+                {
+            boundingBox = "973,3265,1073,80";
+            words =             (
+                                {
+                    boundingBox = "973,3267,190,70";
+                    text = Visit;
+                },
+                                {
+                    boundingBox = "1211,3265,354,73";
+                    text = Starbucks;
+                },
+                                {
+                    boundingBox = "1584,3265,462,80";
+                    text = "ecom/rewards";
+                }
+            );
+        },
+                {
+            boundingBox = "1133,3363,753,84";
+            words =             (
+                                {
+                    boundingBox = "1133,3367,74,68";
+                    text = Or;
+                },
+                                {
+                    boundingBox = "1253,3363,312,73";
+                    text = download;
+                },
+                                {
+                    boundingBox = "1611,3383,114,53";
+                    text = our;
+                },
+                                {
+                    boundingBox = "1771,3383,115,64";
+                    text = app;
+                }
+            );
+        },
+                {
+            boundingBox = "1055,3464,912,79";
+            words =             (
+                                {
+                    boundingBox = "1055,3464,71,67";
+                    text = At;
+                },
+                                {
+                    boundingBox = "1174,3464,512,79";
+                    text = participating;
+                },
+                                {
+                    boundingBox = "1731,3465,236,69";
+                    text = stores;
+                }
+            );
+        },
+                {
+            boundingBox = "1056,3560,911,83";
+            words =             (
+                                {
+                    boundingBox = "1056,3561,153,68";
+                    text = Some;
+                },
+                                {
+                    boundingBox = "1261,3563,466,69";
+                    text = restrictions;
+                },
+                                {
+                    boundingBox = "1773,3560,194,83";
+                    text = apply;
+                }
+            );
+        }
+    );
+}
+)
+, "orientation": Up])
