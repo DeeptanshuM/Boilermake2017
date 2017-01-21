@@ -79,6 +79,31 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
         let requestObject: OCRRequestObject = (resource: UIImagePNGRepresentation(image!)!, language: .Automatic, detectOrientation: true)
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
             let text = self.ocr.extractStringFromDictionary(response!)
+            
+            // Save data to file
+            let fileName = "Data"
+            let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            
+            let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+            print("FilePath: \(fileURL.path)")
+            
+            let writeString = text
+            do {
+                // Write to the file
+                try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+            } catch let error as NSError {
+                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+            }
+            
+            var readString = "" // Used to store the file contents
+            do {
+                // Read the file contents
+                readString = try String(contentsOf: fileURL)
+            } catch let error as NSError {
+                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+            }
+            print("File Text: \(readString)")
+            
             self.textView.text = text
             print(response)
             
