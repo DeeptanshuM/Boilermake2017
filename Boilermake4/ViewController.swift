@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
-
+  
   @IBOutlet weak var photoImage: UIImageView!
   
   override func viewDidLoad() {
@@ -25,25 +25,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,  UINavi
   }
   
   //MARK: UIImagePickerControllerDelegate
-  
-  
-  //MARK: Actions
-  
-  @IBAction func loadImageFromPhotoLibrary(_ sender: UIButton) {
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.sourceType = .photoLibrary
-    imagePickerController.delegate = self
-    
-    present(imagePickerController, animated: true, completion: nil)
-
-    
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    // Dismiss the picker if the user canceled.
+    dismiss(animated: true, completion: nil)
   }
   
-  func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    // The info dictionary may contain multiple representations of the image. You want to use the original.
+    guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+      fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+    }
+  }
+  
+    //MARK: Actions
+    
+  @IBAction func loadImageFromPhotoLibrary(_ sender: Any) {
 
-
-
-
-}
+      let imagePickerController = UIImagePickerController()
+      imagePickerController.sourceType = .photoLibrary
+      imagePickerController.delegate = self
+      
+      present(imagePickerController, animated: true, completion: nil)
+      
+      
+    }
+  }
 
