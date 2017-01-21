@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
   
@@ -79,7 +80,27 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
         let requestObject: OCRRequestObject = (resource: UIImageJPEGRepresentation(image!, 0.8), language: .Automatic, detectOrientation: true)
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
             let text = self.ocr.extractStringFromDictionary(response!)
+          
+          ////////////////////////////////////////////////////////////////
+          do {
+            let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
+            // here "jsonData" is the dictionary encoded in JSON data
             
+            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            // here "decoded" is of type `Any`, decoded from JSON data
+            
+            // you can now cast it with the right type
+            if let dictFromJSON = decoded as? ([String:AnyObject?]) {
+              // use dictFromJSON
+                print(dictFromJSON["regions"])
+            }
+            
+          } catch {
+          }
+          
+          print("\nfinitto\n")
+          ////////////////////////////////////////////////////////////////////////////////////////
+          
             // Save data to file
             let fileName = "Data"
             let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -105,7 +126,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
             print("File Text: \(readString)")
             
             self.textView.text = text
-            print(response)
+            //print(response)
             
         })
 
