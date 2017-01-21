@@ -26,18 +26,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu6-Uw-hqb">
-                                <rect key="frame" x="161" y="578" width="55" height="30"/>
+                                <rect key="frame" x="86" y="578" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Capture"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-6F-WS7">
+                                <rect key="frame" x="256" y="578" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="load"/>
                                 <connections>
-                                    <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWz-a4-C1f"/>
+                                    <action selector="loadImageFromPhotoLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMY-fy-f9v"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="photoImage" destination="Aci-wF-otL" id="W8x-XS-bu9"/>
+                        <outlet property="photoImageView" destination="Aci-wF-otL" id="LlR-J4-gf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
