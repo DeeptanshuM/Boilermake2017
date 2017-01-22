@@ -51,6 +51,10 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
   }
   
   //Mark: Variables we need
+  var knownProducts: Set = ["Coffee", "Pike"]
+  var product_ycoordinate = [String: Int]()
+  var ycoordinate_Price = [Int: String]()
+  var largestYCoordinate = -1
   
   //MARK: Actions
   
@@ -69,10 +73,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     imagePickerController.sourceType = .photoLibrary
     imagePickerController.delegate = self
     
-    
-    
     present(imagePickerController, animated: true, completion: nil)
-    
     
   }
   
@@ -82,87 +83,98 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
       let text = self.ocr.extractStringFromDictionary(response!)
       
-            ////////////////////////////////////////////////////////////////
-            do {
-              let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
-              // here "jsonData" is the dictionary encoded in JSON data
-      
-              guard let decoded = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary else {
-                
-                return
-              }
-            
-              guard let regions = decoded["regions"] as? [NSDictionary] else {
-                return
-              }
-              
-            //  print(regions)
-              
-              for region in regions {
-                guard let lines = region["lines"] as? [NSDictionary] else {
-                    return
-                }
-                
-                for line in lines {
-                  guard let words = line["words"] as? [NSDictionary] else {
-                    return
-                  }
-                  
-                  for word in words {
-                    var S = (word["boundingBox"]! as! String).components(separatedBy: ",")
-                    
-                    print(S[3])
-     
-                    print(word["text"]!)
-                  }
-                }
-              }
-            
-//              if let dictFromJSON = decoded as? ([String:AnyObject?]) {
-//                // use dictFromJSON
-//                print(type(of: dictFromJSON))
-//                print("first stage passed")
-////                for (k, v) in dictFromJSON{
-////                  print(v)
-////                }
-//                if let uno_nestedDictionary = dictFromJSON["regions"] as? NSArray {
-//                  
-//                }
-//              }
-      
-            } catch {
+      ////////////////////////////////////////////////////////////////
+      do {
+        let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
+        // here "jsonData" is the dictionary encoded in JSON data
+        
+        guard let decoded = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary else {
+          
+          return
+        }
+        
+        guard let regions = decoded["regions"] as? [NSDictionary] else {
+          return
+        }
+        
+        //  print(regions)
+        
+        for region in regions {
+          guard let lines = region["lines"] as? [NSDictionary] else {
+            return
+          }
+          
+          for line in lines {
+            guard let words = line["words"] as? [NSDictionary] else {
+              return
             }
+            
+            for word in words {
+              let y = Int((word["boundingBox"]! as! String).components(separatedBy: ",")[3])!
+              let product = word["text"]! as! String
+              
+              if(self.knownProducts.contains(product)){
+                self.product_ycoordinate[product] = y
+              }
+              
+              if y > self.largestYCoordinate{
+                self.largestYCoordinate = y
+              }
+              
+              //print(S[3])
+              //print(word["text"]!)
+            }
+            
+            
+            
+          }
+        }
+        
+        //              if let dictFromJSON = decoded as? ([String:AnyObject?]) {
+        //                // use dictFromJSON
+        //                print(type(of: dictFromJSON))
+        //                print("first stage passed")
+        ////                for (k, v) in dictFromJSON{
+        ////                  print(v)
+        ////                }
+        //                if let uno_nestedDictionary = dictFromJSON["regions"] as? NSArray {
+        //
+        //                }
+        //              }
+        
+      } catch {
+      }
       
-            print("\nfinitto\n")
-            ////////////////////////////////////////////////////////////////////////////////////////
+      print("\nfinitto\n")
+      ////////////////////////////////////////////////////////////////////////////////////////
       
       // Save data to file
-//      let fileName = "Data"
-//      let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-//      
-//      let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-//      print("FilePath: \(fileURL.path)")
-//      
-//      let writeString = text
-//      do {
-//        // Write to the file
-//        try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-//      } catch let error as NSError {
-//        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-//      }
-//      
-//      var readString = "" // Used to store the file contents
-//      do {
-//        // Read the file contents
-//        readString = try String(contentsOf: fileURL)
-//      } catch let error as NSError {
-//        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-//      }
-//      print("File Text: \(readString)")
-//      
-//      self.textView.text = text
-//      print(response)
-//      
+      //      let fileName = "Data"
+      //      let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      //
+      //      let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+      //      print("FilePath: \(fileURL.path)")
+      //
+      //      let writeString = text
+      //      do {
+      //        // Write to the file
+      //        try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+      //      } catch let error as NSError {
+      //        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+      //      }
+      //
+      //      var readString = "" // Used to store the file contents
+      //      do {
+      //        // Read the file contents
+      //        readString = try String(contentsOf: fileURL)
+      //      } catch let error as NSError {
+      //        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+      //      }
+      //      print("File Text: \(readString)")
+      //
+      //      self.textView.text = text
+      //      print(response)
+      //
     })
     
     
