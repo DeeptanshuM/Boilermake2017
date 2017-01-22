@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46650CC91E332C5C00E75B09 /* History.storyboard */; };
+		46B42BA31E3425B10079AC20 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */; };
+		46B42BA51E34262F0079AC20 /* LocationPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */; };
+		46B42BA71E3427840079AC20 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA61E3427840079AC20 /* HistoryViewController.swift */; };
+		46B42BA91E3427A10079AC20 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA81E3427A10079AC20 /* CommunityViewController.swift */; };
+		46B42BAB1E3427EC0079AC20 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAA1E3427EC0079AC20 /* MapViewController.swift */; };
+		46B42BAD1E3428570079AC20 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAC1E3428570079AC20 /* SettingsViewController.swift */; };
+		46B42BAF1E3437300079AC20 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */; };
+		46B42BB11E34373B0079AC20 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */; };
+		46B42BB31E3438110079AC20 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */; };
 		5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601831E332AE700F532E4 /* CognitiveServices.swift */; };
 		5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601851E332AE700F532E4 /* AnalyzeImage.swift */; };
 		541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601861E332AE700F532E4 /* GetThumbnail.swift */; };
@@ -26,7 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		46650CC91E332C5C00E75B09 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickViewController.swift; sourceTree = "<group>"; };
+		46B42BA61E3427840079AC20 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		46B42BA81E3427A10079AC20 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		46B42BAA1E3427EC0079AC20 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46B42BAC1E3428570079AC20 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
+		46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		541601831E332AE700F532E4 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 		541601851E332AE700F532E4 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
 		541601861E332AE700F532E4 /* GetThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
@@ -124,7 +140,15 @@
 				AE2CB51C1E330C1200F4071D /* LaunchScreen.storyboard */,
 				AE2CB51F1E330C1200F4071D /* Info.plist */,
 				AE2CB5171E330C1200F4071D /* Boilermake4.xcdatamodeld */,
-				46650CC91E332C5C00E75B09 /* History.storyboard */,
+				46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */,
+				46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */,
+				46B42BA61E3427840079AC20 /* HistoryViewController.swift */,
+				46B42BA81E3427A10079AC20 /* CommunityViewController.swift */,
+				46B42BAA1E3427EC0079AC20 /* MapViewController.swift */,
+				46B42BAC1E3428570079AC20 /* SettingsViewController.swift */,
+				46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */,
+				46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */,
+				46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */,
 			);
 			path = Boilermake4;
 			sourceTree = "<group>";
@@ -192,7 +216,6 @@
 				AE2CB51E1E330C1200F4071D /* LaunchScreen.storyboard in Resources */,
 				AE2CB51B1E330C1200F4071D /* Assets.xcassets in Resources */,
 				AE2CB5161E330C1200F4071D /* Main.storyboard in Resources */,
-				46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,18 +226,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B42BB11E34373B0079AC20 /* ItemsTableViewCell.swift in Sources */,
 				541601921E332AE700F532E4 /* OCR.swift in Sources */,
 				AE2CB5131E330C1200F4071D /* OCRViewController.swift in Sources */,
+				46B42BB31E3438110079AC20 /* CommunityTableViewCell.swift in Sources */,
+				46B42BA31E3425B10079AC20 /* SuggestionViewController.swift in Sources */,
+				46B42BA71E3427840079AC20 /* HistoryViewController.swift in Sources */,
 				541601941E332AE700F532E4 /* TagImage.swift in Sources */,
 				AE2CB5111E330C1200F4071D /* AppDelegate.swift in Sources */,
 				541601951E332AE700F532E4 /* JSONNSDataExtension.swift in Sources */,
 				5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */,
+				46B42BAF1E3437300079AC20 /* SuggestionTableViewCell.swift in Sources */,
 				541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */,
 				AE2CB5191E330C1200F4071D /* Boilermake4.xcdatamodeld in Sources */,
 				541601961E332AE700F532E4 /* StringExtension.swift in Sources */,
+				46B42BA51E34262F0079AC20 /* LocationPickViewController.swift in Sources */,
+				46B42BA91E3427A10079AC20 /* CommunityViewController.swift in Sources */,
 				5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */,
 				541601931E332AE700F532E4 /* RecognizeDomainSpecificContent.swift in Sources */,
 				541601911E332AE700F532E4 /* ListDomainSpecificModels.swift in Sources */,
+				46B42BAB1E3427EC0079AC20 /* MapViewController.swift in Sources */,
+				46B42BAD1E3428570079AC20 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
