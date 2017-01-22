@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46650CC91E332C5C00E75B09 /* History.storyboard */; };
+		46B42BA31E3425B10079AC20 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */; };
+		46B42BA51E34262F0079AC20 /* LocationPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */; };
+		46B42BA71E3427840079AC20 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA61E3427840079AC20 /* HistoryViewController.swift */; };
+		46B42BA91E3427A10079AC20 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BA81E3427A10079AC20 /* CommunityViewController.swift */; };
+		46B42BAB1E3427EC0079AC20 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAA1E3427EC0079AC20 /* MapViewController.swift */; };
+		46B42BAD1E3428570079AC20 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAC1E3428570079AC20 /* SettingsViewController.swift */; };
+		46B42BAF1E3437300079AC20 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */; };
+		46B42BB11E34373B0079AC20 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */; };
+		46B42BB31E3438110079AC20 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */; };
 		5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601831E332AE700F532E4 /* CognitiveServices.swift */; };
 		5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601851E332AE700F532E4 /* AnalyzeImage.swift */; };
 		541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541601861E332AE700F532E4 /* GetThumbnail.swift */; };
@@ -23,10 +31,19 @@
 		AE2CB5191E330C1200F4071D /* Boilermake4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE2CB5171E330C1200F4071D /* Boilermake4.xcdatamodeld */; };
 		AE2CB51B1E330C1200F4071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2CB51A1E330C1200F4071D /* Assets.xcassets */; };
 		AE2CB51E1E330C1200F4071D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2CB51C1E330C1200F4071D /* LaunchScreen.storyboard */; };
+		B35A5625DF6FC54B16307DEF /* Pods_Boilermake4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2228B440BA8B2B21D3802F /* Pods_Boilermake4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		46650CC91E332C5C00E75B09 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickViewController.swift; sourceTree = "<group>"; };
+		46B42BA61E3427840079AC20 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		46B42BA81E3427A10079AC20 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		46B42BAA1E3427EC0079AC20 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46B42BAC1E3428570079AC20 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
+		46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		541601831E332AE700F532E4 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 		541601851E332AE700F532E4 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
 		541601861E332AE700F532E4 /* GetThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 		5416018A1E332AE700F532E4 /* TagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagImage.swift; sourceTree = "<group>"; };
 		5416018B1E332AE700F532E4 /* JSONNSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNSDataExtension.swift; sourceTree = "<group>"; };
 		5416018D1E332AE700F532E4 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		73E8089E34AFCEFA3BBC0E7D /* Pods-Boilermake4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilermake4.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boilermake4/Pods-Boilermake4.release.xcconfig"; sourceTree = "<group>"; };
 		AE2CB50D1E330C1200F4071D /* Boilermake4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boilermake4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2CB5101E330C1200F4071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE2CB5121E330C1200F4071D /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +62,8 @@
 		AE2CB51A1E330C1200F4071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2CB51D1E330C1200F4071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE2CB51F1E330C1200F4071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD2228B440BA8B2B21D3802F /* Pods_Boilermake4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boilermake4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A3D1CD1E6242CB9FF133D0 /* Pods-Boilermake4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilermake4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boilermake4/Pods-Boilermake4.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35A5625DF6FC54B16307DEF /* Pods_Boilermake4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +118,21 @@
 			path = "Swift Extensions";
 			sourceTree = "<group>";
 		};
+		983427FC94B6B8D9AA2D0E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD2228B440BA8B2B21D3802F /* Pods_Boilermake4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE2CB5041E330C1200F4071D = {
 			isa = PBXGroup;
 			children = (
 				AE2CB50F1E330C1200F4071D /* Boilermake4 */,
 				AE2CB50E1E330C1200F4071D /* Products */,
+				FC8F77A5F580C19B5136A1F9 /* Pods */,
+				983427FC94B6B8D9AA2D0E02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,9 +155,26 @@
 				AE2CB51C1E330C1200F4071D /* LaunchScreen.storyboard */,
 				AE2CB51F1E330C1200F4071D /* Info.plist */,
 				AE2CB5171E330C1200F4071D /* Boilermake4.xcdatamodeld */,
-				46650CC91E332C5C00E75B09 /* History.storyboard */,
+				46B42BA21E3425B10079AC20 /* SuggestionViewController.swift */,
+				46B42BA41E34262F0079AC20 /* LocationPickViewController.swift */,
+				46B42BA61E3427840079AC20 /* HistoryViewController.swift */,
+				46B42BA81E3427A10079AC20 /* CommunityViewController.swift */,
+				46B42BAA1E3427EC0079AC20 /* MapViewController.swift */,
+				46B42BAC1E3428570079AC20 /* SettingsViewController.swift */,
+				46B42BAE1E3437300079AC20 /* SuggestionTableViewCell.swift */,
+				46B42BB01E34373B0079AC20 /* ItemsTableViewCell.swift */,
+				46B42BB21E3438110079AC20 /* CommunityTableViewCell.swift */,
 			);
 			path = Boilermake4;
+			sourceTree = "<group>";
+		};
+		FC8F77A5F580C19B5136A1F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3D1CD1E6242CB9FF133D0 /* Pods-Boilermake4.debug.xcconfig */,
+				73E8089E34AFCEFA3BBC0E7D /* Pods-Boilermake4.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE2CB5221E330C1200F4071D /* Build configuration list for PBXNativeTarget "Boilermake4" */;
 			buildPhases = (
+				7BC0FCEE94294321A888782A /* [CP] Check Pods Manifest.lock */,
 				AE2CB5091E330C1200F4071D /* Sources */,
 				AE2CB50A1E330C1200F4071D /* Frameworks */,
 				AE2CB50B1E330C1200F4071D /* Resources */,
+				7AC1F5CD9A28B2CFBC0A045A /* [CP] Embed Pods Frameworks */,
+				821BF97C088610724BBFCCD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,29 +243,85 @@
 				AE2CB51E1E330C1200F4071D /* LaunchScreen.storyboard in Resources */,
 				AE2CB51B1E330C1200F4071D /* Assets.xcassets in Resources */,
 				AE2CB5161E330C1200F4071D /* Main.storyboard in Resources */,
-				46650CCA1E332C5C00E75B09 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AC1F5CD9A28B2CFBC0A045A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boilermake4/Pods-Boilermake4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BC0FCEE94294321A888782A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		821BF97C088610724BBFCCD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boilermake4/Pods-Boilermake4-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE2CB5091E330C1200F4071D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B42BB11E34373B0079AC20 /* ItemsTableViewCell.swift in Sources */,
 				541601921E332AE700F532E4 /* OCR.swift in Sources */,
 				AE2CB5131E330C1200F4071D /* OCRViewController.swift in Sources */,
+				46B42BB31E3438110079AC20 /* CommunityTableViewCell.swift in Sources */,
+				46B42BA31E3425B10079AC20 /* SuggestionViewController.swift in Sources */,
+				46B42BA71E3427840079AC20 /* HistoryViewController.swift in Sources */,
 				541601941E332AE700F532E4 /* TagImage.swift in Sources */,
 				AE2CB5111E330C1200F4071D /* AppDelegate.swift in Sources */,
 				541601951E332AE700F532E4 /* JSONNSDataExtension.swift in Sources */,
 				5416018E1E332AE700F532E4 /* CognitiveServices.swift in Sources */,
+				46B42BAF1E3437300079AC20 /* SuggestionTableViewCell.swift in Sources */,
 				541601901E332AE700F532E4 /* GetThumbnail.swift in Sources */,
 				AE2CB5191E330C1200F4071D /* Boilermake4.xcdatamodeld in Sources */,
 				541601961E332AE700F532E4 /* StringExtension.swift in Sources */,
+				46B42BA51E34262F0079AC20 /* LocationPickViewController.swift in Sources */,
+				46B42BA91E3427A10079AC20 /* CommunityViewController.swift in Sources */,
 				5416018F1E332AE700F532E4 /* AnalyzeImage.swift in Sources */,
 				541601931E332AE700F532E4 /* RecognizeDomainSpecificContent.swift in Sources */,
 				541601911E332AE700F532E4 /* ListDomainSpecificModels.swift in Sources */,
+				46B42BAB1E3427EC0079AC20 /* MapViewController.swift in Sources */,
+				46B42BAD1E3428570079AC20 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +444,7 @@
 		};
 		AE2CB5231E330C1200F4071D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A3D1CD1E6242CB9FF133D0 /* Pods-Boilermake4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -344,7 +452,7 @@
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaabc123";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Boilermake4.Boilermake2017abc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -352,6 +460,7 @@
 		};
 		AE2CB5241E330C1200F4071D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E8089E34AFCEFA3BBC0E7D /* Pods-Boilermake4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -359,7 +468,7 @@
 				INFOPLIST_FILE = Boilermake4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Boilermake4.Boilermake2017-ReceiptIdeaabc123";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Boilermake4.Boilermake2017abc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

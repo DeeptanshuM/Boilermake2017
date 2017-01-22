@@ -121,6 +121,8 @@ class OCR: NSObject {
         
     }
     
+    
+    
 	/**
      Returns an Array of Strings extracted from the Dictionary generated from `recognizeCharactersOnImageUrl()`
      - Parameter dictionary: The Dictionary created by `recognizeCharactersOnImageUrl()`.

@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Allows you to add photos of your receipts using your camera.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allows you to access the map.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allows you to add photos of your receipts.</string>
 	<key>UILaunchStoryboardName</key>
