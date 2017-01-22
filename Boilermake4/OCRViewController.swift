@@ -117,7 +117,12 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
               print(y, textFromImage)
               
               if (self.knownPlaces.contains(textFromImage)){
-                self.dasPlace = textFromImage
+                if(textFromImage == "STARBUCKS"){
+                  self.dasPlace = "Starbucks"
+                }
+                else if(textFromImage == "Panera"){
+                  self.dasPlace = "Panera Bread"
+                }
               }
               
               if(self.knownProducts.contains(textFromImage)){
@@ -139,8 +144,8 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
           }
         }
         
-       
-
+        
+        
         
       } catch {
       }
@@ -148,7 +153,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
       for(key, val) in self.product_ycoordinate{
         let v_lower = val - 5
         let v_upper = val + 6
-
+        
         //print(key, val)
         
         var flag: Int = 0
