@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationUsageDescription</key>
-	<string>Allows you to access the map.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allows you to get your current location</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Allows you to add photos of your receipts using your camera.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allows you to access the map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allows you to get current location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allows you to add photos of your receipts.</string>
 	<key>UILaunchStoryboardName</key>
@@ -37,8 +41,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

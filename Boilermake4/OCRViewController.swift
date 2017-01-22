@@ -7,6 +7,8 @@
 //
 import UIKit
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     
@@ -82,7 +84,41 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
             self.photoLibraryButton.isHidden = true
             self.takePhotoButton.isHidden = true
         }
+
     }
+    
+    func pullDataFromMDB(type: String) {
+        
+        Alamofire.request("https://3e7b6fab.ngrok.io/getItem/" + type).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                print(swiftyJsonVar)
+                let price = swiftyJsonVar[0].dictionary?["price"]
+                print(price)
+            }
+            
+        }
+    }
+    
+    func pushDataToMDB(product: String, price: Double, store: String, lat: String, long: String) {
+        
+        let parameters: [String: Any] = [
+            "product": product,
+            "price": price,
+            "lat": lat,
+            "long": long
+        ]
+
+        
+        Alamofire.request("https://3e7b6fab.ngrok.io/addItem", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseString { response in
+                print(response)
+        }
+   
+        
+        
+    }
+
 
     
     //Mark: Variables we need
@@ -120,10 +156,10 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
         print("Convert command received")
         let requestObject: OCRRequestObject = (resource: UIImageJPEGRepresentation(image!, 0.8), language: .Automatic, detectOrientation: true)
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
-            let text = self.ocr.extractStringFromDictionary(response!)
+            print(response)
             
             do {
-                let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
+                let jsonData = try JSONSerialization.data(withJSONObject: response as! NSDictionary, options: JSONSerialization.WritingOptions.prettyPrinted)
                 // here "jsonData" is the dictionary encoded in JSON data
                 
                 guard let decoded = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary else {
@@ -217,6 +253,7 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
             //      }
             
             print("\nfinitto\n", self.toSend)
+            print("\(self.ycoordinate_Price)")
             ////////////////////////////////////////////////////////////////////////////////////////
             
             // Save data to file
@@ -246,9 +283,9 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
             //      self.textView.text = text
             //      print(response)
             //
+            self.performSegue(withIdentifier: "suggestionSegue", sender: self)
         })
         
-        performSegue(withIdentifier: "suggestionSegue", sender: self)
         
     }
     @IBAction func retake(_ sender: AnyObject) {
@@ -263,5 +300,19 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
         takePhotoButton.isEnabled = true
         orLabel.text = "OR"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! SuggestionViewController
+        if self.toSend.count == 0 {
+            let alert = UIAlertController(title: "An Error Ocurred", message: "We could not get your data.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        dest.product = self.toSend[0].x
+        dest.price = self.toSend[0].z
+    }
+    
     
 }

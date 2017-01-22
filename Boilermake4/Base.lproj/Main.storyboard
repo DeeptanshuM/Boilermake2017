@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Receipt-->
         <scene sceneID="PIU-O8-6lw">
             <objects>
                 <viewController id="Txe-fs-g58" customClass="OCRViewController" customModule="Boilermake4" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,9 +69,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26c-w0-Z1q">
                                 <color key="backgroundColor" red="0.50957934670000005" green="0.99835759400000001" blue="0.52061752530000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="OGb-s7-SRZ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Use">
                                     <color key="titleColor" red="0.1450980392" green="0.3411764706" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,9 +84,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUT-aa-993">
                                 <color key="backgroundColor" red="0.50957934670000005" green="0.99835759400000001" blue="0.52061752530000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="frV-ku-7Pw"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Retake">
                                     <color key="titleColor" red="0.1450980392" green="0.3411764706" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,7 +128,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="26c-w0-Z1q" secondAttribute="bottom" constant="83" id="xZK-mD-Tap"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Jvr-4R-nC9"/>
+                    <tabBarItem key="tabBarItem" title="Receipt" id="Jvr-4R-nC9"/>
                     <connections>
                         <outlet property="orLabel" destination="bQV-N6-vsn" id="zbf-b5-J9L"/>
                         <outlet property="photoImageView" destination="tIn-UM-sUL" id="zPu-ya-fu3"/>
@@ -285,7 +279,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUy-dd-qBc" id="NjM-Rn-59S">
-                                            <frame key="frameInset" width="1000" height="88"/>
+                                            <frame key="frameInset" width="1000" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUs-Bk-LLW">
@@ -341,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="6412" y="868.51574212893559"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="fd2-IM-uQh">
             <objects>
                 <viewController id="hAz-z6-R6X" customClass="SettingsViewController" customModule="Boilermake4" customModuleProvider="target" sceneMemberID="viewController">
@@ -425,7 +419,7 @@
                             <outletCollection property="gestureRecognizers" destination="xUk-cM-duD" appends="YES" id="sMp-2p-XZF"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Kch-5m-BAl"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Kch-5m-BAl"/>
                     <connections>
                         <outlet property="budgetTextField" destination="weg-rP-f8Z" id="rkf-mC-dwc"/>
                         <outlet property="pickerView" destination="BHc-dm-iwb" id="QNg-lt-ys3"/>
@@ -486,7 +480,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAQ-gf-cY7" id="Ft8-mz-XPc">
-                                            <frame key="frameInset" width="375" height="130"/>
+                                            <frame key="frameInset" width="375" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="sPc-40-Gku">
@@ -623,7 +617,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onGo:" destination="V3v-bn-gXP" eventType="touchUpInside" id="FQQ-vn-Np3"/>
-                                    <segue destination="Txe-fs-g58" kind="presentation" id="8iu-aV-Dk4"/>
+                                    <segue destination="hME-hJ-2Xw" kind="presentation" identifier="homeSegue" id="hZc-0E-RzD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6B-yk-auE">
@@ -664,10 +658,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bxv-Ik-LVX" secondAttribute="trailing" constant="95" id="yhR-8o-5gA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Qq8-Wr-Hi7" id="T0A-Ak-llE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vM2-Op-4vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5245.6000000000004" y="138.98050974512745"/>
+            <point key="canvasLocation" x="6078" y="139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HZ3-Bh-ymR">
@@ -690,11 +687,11 @@
             </objects>
             <point key="canvasLocation" x="2752.8000000000002" y="138.98050974512745"/>
         </scene>
-        <!--Item-->
+        <!--History-->
         <scene sceneID="naF-cG-1xX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7dr-Ns-2ra" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fyg-wQ-Gyi"/>
+                    <tabBarItem key="tabBarItem" title="History" id="fyg-wQ-Gyi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rJR-j6-Gov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -709,11 +706,11 @@
             </objects>
             <point key="canvasLocation" x="3692" y="869.41529235382313"/>
         </scene>
-        <!--Item-->
+        <!--Community-->
         <scene sceneID="QwO-vm-zaz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dvX-RM-hR2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tPB-lO-toc"/>
+                    <tabBarItem key="tabBarItem" title="Community" id="tPB-lO-toc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xap-dP-TrW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -734,6 +731,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="E2K-mM-RlW"/>
-        <segue reference="8iu-aV-Dk4"/>
     </inferredMetricsTieBreakers>
 </document>

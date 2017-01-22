@@ -10,9 +10,13 @@ import UIKit
 
 class SuggestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    
+    var product: String!
+    var price: Double!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -23,20 +27,33 @@ class SuggestionViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func onGo(_ sender: AnyObject) {
+        /**let indexPath = NSIndexPath(row: 0, section: 0)
+        let cell = tableView.cellForRow(at: indexPath as IndexPath) as! SuggestionTableViewCell
+        if let p = cell.price {
+            price = p
+        }
+        if let p =  cell.item {
+            product = p
+        }**/
         performSegue(withIdentifier: "locationSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! LocationPickViewController
+        dest.product = self.product
+        dest.price = self.price
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionCell", for: indexPath) as! SuggestionTableViewCell
+        print(product)
+        cell.itemLabel.text = product
+        cell.priceLabel.text = "\(price!)"
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }

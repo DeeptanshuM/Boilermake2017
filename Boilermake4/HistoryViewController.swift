@@ -7,23 +7,27 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    var arr: [String] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         let defaults = UserDefaults.standard
         
         budgetLabel.text = String(format:"$%.2f/$%.2f", defaults.value(forKey: "total") as! Double, defaults.value(forKey: "budget") as! Double)
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        arr = getItems("coffee")
 
         // Do any additional setup after loading the view.
     }
@@ -44,13 +48,73 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     */
     
+    func getItems(type: String) -> [String] {
+        var price: String = ""
+        var product: String = ""
+        var lat: String = ""
+        var lng: String = ""
+        
+        var result: [String] = []
+        Alamofire.request("https://96838f4d.ngrok.io/getItem/" + type).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                print(swiftyJsonVar)
+                price = "\(swiftyJsonVar[0].dictionary?["price"])"
+                print(price)
+                result.append(price)
+                product = "\(swiftyJsonVar[0].dictionary?["product"])"
+                result.append(product)
+                lat = "\(swiftyJsonVar[0].dictionary?["lat"])"
+                result.append(lat)
+                lng = "\(swiftyJsonVar[0].dictionary?["long"])"
+                result.append(lng)
+                
+            }
+            
+        }
+        return result
+    }
+    
+    func getItems() -> [String] {
+        var price: String = ""
+        var product: String = ""
+        var lat: String = ""
+        var lng: String = ""
+        print("asdfasdf")
+        var result: [String] = []
+        Alamofire.request("https://96838f4d.ngrok.io/getAllItems/").responseJSON { (responseData) -> Void in
+            print("asdfasdfasdf")
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                print(swiftyJsonVar)
+                price = "\(swiftyJsonVar[0].dictionary?["price"])"
+                print(price)
+                result.append(price)
+                product = "\(swiftyJsonVar[0].dictionary?["product"])"
+                result.append(product)
+                lat = "\(swiftyJsonVar[0].dictionary?["lat"])"
+                result.append(lat)
+                lng = "\(swiftyJsonVar[0].dictionary?["long"])"
+                result.append(lng)
+                print("asdfasdfasdfas")
+            }
+            
+        }
+        return result
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        print(arr.count)
+        return arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemsTableViewCell
+        
+        print(arr[indexPath.row])
+        cell.itemLabel.text = arr[indexPath.row * 4]
+        cell.priceLabel.text = "\(arr[indexPath.row * 4 + 1])"
         
         return cell
     }

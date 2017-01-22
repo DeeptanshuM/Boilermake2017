@@ -13,11 +13,23 @@ class SuggestionTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    
+    var item: String?
+    var price: Double?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         itemTextField.delegate = self
         priceTextField.delegate = self
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == itemTextField {
+            item = itemTextField.text
+        }
+        else {
+            price = Double(priceTextField.text!)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
