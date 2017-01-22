@@ -51,10 +51,14 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
   }
   
   //Mark: Variables we need
+  
+  var knownPlaces: Set = ["STARBUCKS", "Panera"]
   var knownProducts: Set = ["Coffee", "Pike"]
   var product_ycoordinate = [String: Int]()
-  var ycoordinate_Price = [Int: String]()
-  var largestYCoordinate = -1
+  var ycoordinate_Price = [Int: Double]()
+  //var largestYCoordinate = -1
+  var toSend: [(x: String, y:String, z: Double)] = []
+  var dasPlace: String = ""
   
   //MARK: Actions
   
@@ -78,12 +82,11 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
   }
   
   @IBAction func convertToText(_ sender: Any) {
-    
+    print("Convert command received")
     let requestObject: OCRRequestObject = (resource: UIImageJPEGRepresentation(image!, 0.8), language: .Automatic, detectOrientation: true)
     try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
       let text = self.ocr.extractStringFromDictionary(response!)
       
-      ////////////////////////////////////////////////////////////////
       do {
         let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
         // here "jsonData" is the dictionary encoded in JSON data
@@ -97,8 +100,6 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
           return
         }
         
-        //  print(regions)
-        
         for region in regions {
           guard let lines = region["lines"] as? [NSDictionary] else {
             return
@@ -111,41 +112,71 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
             
             for word in words {
               let y = Int((word["boundingBox"]! as! String).components(separatedBy: ",")[3])!
-              let product = word["text"]! as! String
+              let textFromImage = word["text"]! as! String
               
-              if(self.knownProducts.contains(product)){
-                self.product_ycoordinate[product] = y
+              print(y, textFromImage)
+              
+              if (self.knownPlaces.contains(textFromImage)){
+                self.dasPlace = textFromImage
               }
               
-              if y > self.largestYCoordinate{
-                self.largestYCoordinate = y
+              if(self.knownProducts.contains(textFromImage)){
+                self.product_ycoordinate[textFromImage] = y
               }
               
-              //print(S[3])
-              //print(word["text"]!)
+              var Price = NumberFormatter().number(from: textFromImage)?.doubleValue
+              
+              if (Price != nil){
+                print(Price!)
+                //Round price tp 2 places
+                let temp = Price
+                Price = Double(round(100*temp!)/100)
+                
+                self.ycoordinate_Price[y] = Price
+              }
             }
-            
-            
             
           }
         }
         
-        //              if let dictFromJSON = decoded as? ([String:AnyObject?]) {
-        //                // use dictFromJSON
-        //                print(type(of: dictFromJSON))
-        //                print("first stage passed")
-        ////                for (k, v) in dictFromJSON{
-        ////                  print(v)
-        ////                }
-        //                if let uno_nestedDictionary = dictFromJSON["regions"] as? NSArray {
-        //
-        //                }
-        //              }
+       
+
         
       } catch {
       }
       
-      print("\nfinitto\n")
+      for(key, val) in self.product_ycoordinate{
+        let v_lower = val - 5
+        let v_upper = val + 6
+
+        //print(key, val)
+        
+        var flag: Int = 0
+        
+        for i in val...v_upper {
+          if(self.ycoordinate_Price[i] != nil){
+            self.toSend.append((key, self.dasPlace, self.ycoordinate_Price[i]!))
+            flag = 1
+            break;
+          }
+        }
+        
+        if(flag == 0){
+          for i in v_lower...val{
+            if(self.ycoordinate_Price[i] != nil){
+              self.toSend.append((key, self.dasPlace, self.ycoordinate_Price[i]!))
+              flag = 0
+              break;
+            }
+          }
+        }
+      }
+      
+      //      for(key, val) in self.ycoordinate_Price{
+      //        print(key, val)
+      //      }
+      
+      print("\nfinitto\n", self.toSend)
       ////////////////////////////////////////////////////////////////////////////////////////
       
       // Save data to file
