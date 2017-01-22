@@ -16,7 +16,6 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
   var image: UIImage?
   let ocr = CognitiveServices.sharedInstance.ocr
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -50,6 +49,8 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
     // Dismiss the picker.
     dismiss(animated: true, completion: nil)
   }
+  
+  //Mark: Variables we need
   
   //MARK: Actions
   
@@ -90,16 +91,12 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
                 
                 return
               }
-              // here "decoded" is of type `Any`, decoded from JSON data
-      
-              // you can now cast it with the right type
-             
-              //print(decoded)
+            
               guard let regions = decoded["regions"] as? [NSDictionary] else {
                 return
               }
               
-              print(regions)
+            //  print(regions)
               
               for region in regions {
                 guard let lines = region["lines"] as? [NSDictionary] else {
@@ -112,8 +109,11 @@ class OCRViewController: UIViewController, UIImagePickerControllerDelegate,  UIN
                   }
                   
                   for word in words {
-                    print(word["boundingBox"])
-                    print(word["text"])
+                    var S = (word["boundingBox"]! as! String).components(separatedBy: ",")
+                    
+                    print(S[3])
+     
+                    print(word["text"]!)
                   }
                 }
               }
